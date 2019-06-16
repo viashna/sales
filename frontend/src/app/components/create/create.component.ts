@@ -22,8 +22,9 @@ export class CreateComponent implements OnInit {
       phone_no:''
     })
   }
-
+ 
   addSales(name,mail,working_route,phone_no){
+    console.log("hghgh");
     this.salesService.addSales(name,mail,working_route,phone_no).subscribe(()=>{
       this.router.navigate(['/list']);
     })

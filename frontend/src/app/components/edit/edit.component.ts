@@ -11,6 +11,7 @@ import { Sales } from '../../sales.model';
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })
+
 export class EditComponent implements OnInit {
 
   id:String;
@@ -34,7 +35,7 @@ export class EditComponent implements OnInit {
       })
     })
   }
-
+ 
   createForm(){
     this.updateForm = this.fb.group({
       name:['',Validators.required],

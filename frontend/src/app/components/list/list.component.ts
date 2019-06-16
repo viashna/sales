@@ -17,19 +17,21 @@ export class ListComponent implements OnInit {
   displayedColumns = ['name','mail','working_route','phone_no'];
 
   constructor(private salesService:SalesService,private router:Router) { 
-
+    
   }
-
+   
   ngOnInit() {
     this.fetchSales();
-    
   }
 
   fetchSales(){
-    this.salesService.getSales().subscribe((data:Sales[])=>{
-      this.sales = data;
-      console.log("data requested");
-      console.log(this.sales);
+    console.log("good");
+    this.salesService
+      .getSales()
+      .subscribe((data: Sales[]) => {
+        this.sales = data;
+        console.log('Data requested ...');
+        console.log(this.sales);
     });
   }
 
